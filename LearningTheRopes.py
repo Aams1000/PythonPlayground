@@ -11,13 +11,27 @@ print (x);
 # 	print("Second line.")
 
 """Testing lists"""
-test_list = [1, 2, 3]
-for element in test_list:
-	print("List element: {:f}" .format(element))
+# test_list = [1, 2, 3]
+# for element in test_list:
+# 	print("List element: {:f}" .format(element))
 #I'm really not liking this "simpler" way of creating lists. You seem to have a lot more control when actually writing the loops
-second_list = [(x,y) for x in range(0, 10) if x % 4 == 0 for y in range(20)]
-for squared_element in second_list:
-	print("x = {:d}, y = {:d}" .format(squared_element[0], squared_element[1]))
+# second_list = [(x,y) for x in range(0, 10) if x % 4 == 0 for y in range(20)]
+# for squared_element in second_list:
+# 	print("x = {:d}, y = {:d}" .format(squared_element[0], squared_element[1]))
+test_list = []
+for i in range(1, 15):
+	for j in range(1, 15):
+		if j % i != 0:
+			test_list.append((i, j))
+
+#print list
+for pair in test_list:
+	print("Tuple: ({:d},{:d})" .format(pair[0], pair[1]))
+
+#testing enumerators
+for i, pair in enumerate(test_list):
+	print("Index: {:d} Pair: " .format(i), pair)
+
 
 
 
