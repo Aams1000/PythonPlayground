@@ -18,20 +18,43 @@ print (x);
 # second_list = [(x,y) for x in range(0, 10) if x % 4 == 0 for y in range(20)]
 # for squared_element in second_list:
 # 	print("x = {:d}, y = {:d}" .format(squared_element[0], squared_element[1]))
-test_list = []
-for i in range(1, 15):
-	for j in range(1, 15):
-		if j % i != 0:
-			test_list.append((i, j))
+# test_list = []
+# for i in range(1, 15):
+# 	for j in range(1, 15):
+# 		if j % i != 0:
+# 			test_list.append((i, j))
 
-#print list
-for pair in test_list:
-	print("Tuple: ({:d},{:d})" .format(pair[0], pair[1]))
+# #print list
+# for pair in test_list:
+# 	print("Tuple: ({:d},{:d})" .format(pair[0], pair[1]))
 
-#testing enumerators
-for i, pair in enumerate(test_list):
-	print("Index: {:d} Pair: " .format(i), pair)
+# #testing enumerators
+# for i, pair in enumerate(test_list):
+# 	print("Index: {:d} Pair: " .format(i), pair)
 
+#testing sets
+test_set = set()
+for i in range(10):
+	test_set.add(i)
+
+second_set = set()
+test_string = "Hello, world!"
+for character in test_string:
+	if character != 'l':
+		second_set.add(character)
+
+for i in range(0, 4):
+	second_set.add(i)
+
+third_set = test_set.union(second_set)
+for element in third_set:
+	print(element)
+
+#test dictionaries
+# test_dictionary = {}
+# for i in range(0, 10):
+# 	for char in "Hello, world!":
+# 		test_dictionary.append(i, char)
 
 
 
