@@ -1,7 +1,12 @@
+"""Testing functions!"""
+def add_two (input_int):
+	print("Inside function!")
+	return x + 2
+
 print ("Hello, world!");
 x = 4
-print (x);
-
+y = add_two(x)
+print ("Updated value: {:d}" .format(y))
 # """Testing if statements"""
 # test_input = int(input("How old are you?"))
 # if test_input < 0 and test_input > -5:
@@ -33,30 +38,32 @@ print (x);
 # 	print("Index: {:d} Pair: " .format(i), pair)
 
 #testing sets
-test_set = set()
-for i in range(10):
-	test_set.add(i)
+# test_set = set()
+# for i in range(10):
+# 	test_set.add(i)
 
-second_set = set()
-test_string = "Hello, world!"
-for character in test_string:
-	if character != 'l':
-		second_set.add(character)
+# second_set = set()
+# test_string = "Hello, world!"
+# for character in test_string:
+# 	if character != 'l':
+# 		second_set.add(character)
 
-for i in range(0, 4):
-	second_set.add(i)
+# for i in range(0, 4):
+# 	second_set.add(i)
 
-third_set = test_set.union(second_set)
-for element in third_set:
-	print(element)
+# third_set = test_set.union(second_set)
+# for element in third_set:
+# 	print(element)
 
 #test dictionaries
 # test_dictionary = {}
-# for i in range(0, 10):
+# for i in range(0, 11):
 # 	for char in "Hello, world!":
-# 		test_dictionary.append(i, char)
+# 		test_dictionary.update({char : i})
 
-
+# for entry in test_dictionary.items():
+# 	print("Key value: {:s}, Item: {:d}" .format(entry[0], entry[1]))
+# 	print(entry)
 
 # """Testing while statements"""
 # test_int = 0;
