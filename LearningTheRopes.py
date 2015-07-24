@@ -1,12 +1,59 @@
-"""Testing functions!"""
-def add_two (input_int):
-	print("Inside function!")
-	return x + 2
+"""Testing classes"""
+class test_class:
+	
+	def __init__ (self, _class_name, _num_students):
+		self.name = _class_name
+		self.num_students = _num_students
+		self.additional_variables = {}
 
-print ("Hello, world!");
-x = 4
-y = add_two(x)
-print ("Updated value: {:d}" .format(y))
+	def add_variables(self, **additional):
+		if additional is not None:
+			for note in additional.items():
+				self.additional_variables.update({note[0] : note[1]})
+
+	def print_class(self):
+		print("Class name: {0} Number of students: {1}" .format(self.name, self.num_students))
+		for i, additional in enumerate(self.additional_variables.items()):
+			print("Additional note {0}: {1}" .format(i, additional))
+
+math = test_class("Math", 10, )
+additional_variables = {"Level" : "intermediate", "Schedule" : "M W F", "Professor" : "Oak", "Building" : "Kanto"}
+math.add_variables(**additional_variables)
+math.print_class()
+"""Testing functions!"""
+# def add_two (input_int):
+# 	print("Inside function!")
+# 	return x + 2
+
+
+# def return_list_of_integers (input_list):
+# 	for i, element in enumerate(input_list):
+# 		print("Element {0}: {1}" .format(i, element))
+
+# def test_kwargs (**kwargs):
+# 	if kwargs != None:
+# 		for element in kwargs.items():
+# 			print(element)
+
+# def test_args (*args):
+# 	if args != None:
+# 		for element in args:
+# 			print(element)
+
+# print ("Hello, world!");
+# x = 4
+# y = add_two(x)
+# print ("Updated value: {:d}" .format(y))
+# test_list = []
+# for i in range(0, 5):
+# 	test_list.append(i)
+
+# test_dictionary = {'first': 1, "second": 2}
+# test_kwargs(**test_dictionary)
+# test_args(*test_list)
+
+# return_list_of_integers(test_list)
+
 # """Testing if statements"""
 # test_input = int(input("How old are you?"))
 # if test_input < 0 and test_input > -5:
