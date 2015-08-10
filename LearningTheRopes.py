@@ -21,6 +21,112 @@ additional_variables = {"Level" : "intermediate", "Schedule" : "M W F", "Profess
 math.add_variables(**additional_variables)
 math.print_class()
 """Testing functions!"""
+
+class income_tax_calculator:
+
+	# TOP_BRACKET = 1000000
+	# TOP_BRACKET_TAX_RATE = 0.133
+	# TOP_BRACKET_CONSTANT = 1098840
+	# SECOND_BRACKET = 508500
+	# SECOND_BRACKET_TAX_RATE = 0.123
+	# SECOND_BRACKET_CONSTANT = 26445.3
+	# THIRD_BRACKET = 305100
+	# THIRD_BRACKET_TAX_RATE = 0.113
+	# THIRD_BRACKET_CONSTANT = 26445.3
+	# FOURTH_BRACKET = 254250
+	# FOURTH_BRACKET_TAX_RATE = 0.103
+	# FOURTH_BRACKET_CONSTANT = 21207.75
+	# FIFTH_BRACKET = 49774
+	# FIFTH_BRACKET_TAX_RATE = 0.093
+	# FIFTH_BRACKET_CONSTANT = 2191.48
+	# SIXTH_BRACKET = 39384
+	# SIXTH_BRACKET_TAX_RATE = 0.08
+	# SIXTH_BRACKET_CONSTANT = 1360.28
+	# SEVENTH_BRACKET = 28371
+	# SEVENTH_BRACKET_TAX_RATE = 0.06
+	# SEVENTH_BRACKET_CONSTANT = 699.50
+	# EIGTH_BRACKET = 17976
+	# EIGTH_BRACKET_TAX_RATE = 0.04
+	# EIGTH_BRACKET_CONSTANT = 283.7
+	# NINTH_BRACKET = 7982
+	# NINTH_BRACKET_TAX_RATE = 0.02
+	# NINTH_BRACKET_CONSTANT = 75.82
+	# TENTH_BRACKET = 0
+	# TENTH_BRACKET_TAX_RATE = 0.01
+	# TENTH_BRACKET_CONSTANT = 0
+
+	def __init__ (self, _taxable_income):
+		self.taxable_income = _taxable_income
+	
+
+	def calculate_tax_rate_2014(self):
+		
+		TOP_BRACKET = 1000000
+		TOP_BRACKET_TAX_RATE = 0.133
+		TOP_BRACKET_CONSTANT = 1098840
+		SECOND_BRACKET = 508500
+		SECOND_BRACKET_TAX_RATE = 0.123
+		SECOND_BRACKET_CONSTANT = 26445.3
+		THIRD_BRACKET = 305100
+		THIRD_BRACKET_TAX_RATE = 0.113
+		THIRD_BRACKET_CONSTANT = 26445.3
+		FOURTH_BRACKET = 254250
+		FOURTH_BRACKET_TAX_RATE = 0.103
+		FOURTH_BRACKET_CONSTANT = 21207.75
+		FIFTH_BRACKET = 49774
+		FIFTH_BRACKET_TAX_RATE = 0.093
+		FIFTH_BRACKET_CONSTANT = 2191.48
+		SIXTH_BRACKET = 39384
+		SIXTH_BRACKET_TAX_RATE = 0.08
+		SIXTH_BRACKET_CONSTANT = 1360.28
+		SEVENTH_BRACKET = 28371
+		SEVENTH_BRACKET_TAX_RATE = 0.06
+		SEVENTH_BRACKET_CONSTANT = 699.50
+		EIGTH_BRACKET = 17976
+		EIGTH_BRACKET_TAX_RATE = 0.04
+		EIGTH_BRACKET_CONSTANT = 283.7
+		NINTH_BRACKET = 7982
+		NINTH_BRACKET_TAX_RATE = 0.02
+		NINTH_BRACKET_CONSTANT = 75.82
+		TENTH_BRACKET = 0
+		TENTH_BRACKET_TAX_RATE = 0.01
+		TENTH_BRACKET_CONSTANT = 0
+		state_income_tax = 0
+		taxable_income = self.taxable_income
+		if taxable_income > TOP_BRACKET:
+			state_income_tax += (taxable_income - TOP_BRACKET) * TOP_BRACKET_TAX_RATE + TOP_BRACKET_CONSTANT
+			taxable_income = TOP_BRACKET
+		if taxable_income > SECOND_BRACKET:
+			state_income_tax += (taxable_income - SECOND_BRACKET) * SECOND_BRACKET_TAX_RATE + SECOND_BRACKET_CONSTANT
+			taxable_income = SECOND_BRACKET
+		if taxable_income > THIRD_BRACKET:
+			state_income_tax += (taxable_income - THIRD_BRACKET) * THIRD_BRACKET_TAX_RATE + THIRD_BRACKET_CONSTANT
+			taxable_income = THIRD_BRACKET
+		if taxable_income > FOURTH_BRACKET:
+			state_income_tax += (taxable_income - FOURTH_BRACKET) * FOURTH_BRACKET_TAX_RATE + FOURTH_BRACKET_CONSTANT
+			taxable_income = FOURTH_BRACKET
+		if taxable_income > FIFTH_BRACKET:
+			state_income_tax += (taxable_income - FIFTH_BRACKET) * FIFTH_BRACKET_TAX_RATE + FIFTH_BRACKET_CONSTANT
+			taxable_income = FIFTH_BRACKET
+		if taxable_income > SIXTH_BRACKET:
+			state_income_tax += (taxable_income - SIXTH_BRACKET) * SIXTH_BRACKET_TAX_RATE + SIXTH_BRACKET_CONSTANT
+			taxable_income = SIXTH_BRACKET
+		if taxable_income > SEVENTH_BRACKET:
+			state_income_tax += (taxable_income - SEVENTH_BRACKET) * SEVENTH_BRACKET_TAX_RATE + SEVENTH_BRACKET_CONSTANT
+			taxable_income = SEVENTH_BRACKET
+		if taxable_income > EIGTH_BRACKET:
+			state_income_tax += (taxable_income - EIGTH_BRACKET) * EIGTH_BRACKET_TAX_RATE + EIGTH_BRACKET_CONSTANT
+			taxable_income = EIGTH_BRACKET
+		if taxable_income > NINTH_BRACKET:
+			state_income_tax += (taxable_income - NINTH_BRACKET) * NINTH_BRACKET_TAX_RATE + NINTH_BRACKET_CONSTANT
+			taxable_income = NINTH_BRACKET
+		if taxable_income > TENTH_BRACKET:
+			state_income_tax += (taxable_income - TENTH_BRACKET) * TENTH_BRACKET_TAX_RATE + TENTH_BRACKET_CONSTANT
+			taxable_income = TENTH_BRACKET
+		return state_income_tax
+
+test_income_tax = income_tax_calculator(75000)
+print (test_income_tax.calculate_tax_rate_2014())
 # def add_two (input_int):
 # 	print("Inside function!")
 # 	return x + 2
